@@ -3,7 +3,7 @@
    Navbar, Modal de Áreas, Formulário, Mobile Menu
    ============================================================ */
 
-const WA_NUMBER = '5511932053967';
+const WA_NUMBER = '5511910121754';
 const WA_BASE = `https://wa.me/${WA_NUMBER}`;
 
 /** Dados dos modais por área */
