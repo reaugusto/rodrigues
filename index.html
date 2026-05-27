@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rodrigues Theodoro Advogados | Trabalhista · Previdenciário · Cível — Grajaú, São Paulo</title>
-  <meta name="description" content="Rodrigues Theodoro Advogados — escritório especializado em Direito Trabalhista, Previdenciário/INSS e Cível no Grajaú, São Paulo. Atendimento personalizado com ética e compromisso. (11) 5925-4951." />
-  <meta name="keywords" content="advogado trabalhista grajaú, advogado INSS grajaú, aposentadoria, ações trabalhistas São Paulo, pensão alimentícia, rodrigues theodoro advogados" />
+  <meta name="description"
+    content="Rodrigues Theodoro Advogados — escritório especializado em Direito Trabalhista, Previdenciário/INSS e Cível no Grajaú, São Paulo. Atendimento personalizado com ética e compromisso. (11) 5925-4951." />
+  <meta name="keywords"
+    content="advogado trabalhista grajaú, advogado INSS grajaú, aposentadoria, ações trabalhistas São Paulo, pensão alimentícia, rodrigues theodoro advogados" />
   <meta name="author" content="Rodrigues Theodoro Advogados" />
   <meta property="og:title" content="Rodrigues Theodoro Advogados — Grajaú, SP" />
-  <meta property="og:description" content="Direito Trabalhista, Previdenciário e Cível no coração do Grajaú. Acesso à justiça com atendimento humano e resultados." />
+  <meta property="og:description"
+    content="Direito Trabalhista, Previdenciário e Cível no coração do Grajaú. Acesso à justiça com atendimento humano e resultados." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <link rel="canonical" href="https://rodriguestheodoro.adv.br/" />
@@ -38,18 +42,39 @@
 
   <link rel="preload" as="style" href="css/style.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
 
   <!-- Critical CSS inlined for hero FOUC prevention -->
   <style>
-    body { background: #040810; }
-    .navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(4,8,16,0.75); backdrop-filter: blur(24px);
+    body {
+      background: #040810;
     }
-    #hero { min-height: 100svh; background: #040810; }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+
+    .navbar-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: rgba(4, 8, 16, 0.75);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    #hero {
+      min-height: 100svh;
+      background: #040810;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Grain texture -->
@@ -57,6 +82,7 @@
 
   <!-- ── NAVBAR ── -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principal">
+    <div class="navbar-bg" aria-hidden="true"></div>
     <div class="navbar-inner">
       <a href="#" class="navbar-brand" aria-label="Rodrigues Theodoro Advogados — página inicial">
         <span class="navbar-brand-name">Rodrigues Theodoro</span>
@@ -64,18 +90,26 @@
       </a>
 
       <div class="navbar-links" id="nav-links" role="menubar">
-        <a href="#sobre" role="menuitem">Sobre</a>
-        <a href="#areas" role="menuitem">Áreas</a>
-        <a href="#diferenciais" role="menuitem">Diferenciais</a>
-        <a href="#contato" role="menuitem">Contato</a>
-        <a
-          href="https://wa.me/5511932053967?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Rodrigues%20Theodoro%20Advogados."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-nav"
-          id="nav-cta"
-          role="menuitem"
-        >Consulta Gratuita</a>
+        <a href="#sobre" role="menuitem" data-num="01">Sobre</a>
+        <a href="#areas" role="menuitem" data-num="02">Áreas</a>
+        <a href="#diferenciais" role="menuitem" data-num="03">Diferenciais</a>
+        <a href="#contato" role="menuitem" data-num="04">Contato</a>
+
+        <a href="https://wa.me/5511932053967?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Rodrigues%20Theodoro%20Advogados."
+          target="_blank" rel="noopener noreferrer" class="btn-nav" id="nav-cta" role="menuitem">
+          <span class="material-symbols-outlined" style="font-size:1rem" aria-hidden="true">chat</span>
+          Consulta Gratuita
+        </a>
+
+        <!-- Tagline decorativa — visível apenas no mobile 
+        <div class="mobile-menu-tagline" aria-hidden="true">
+          <span>Trabalhista</span>
+          <span class="mobile-menu-tagline-dot"></span>
+          <span>Previdenciário</span>
+          <span class="mobile-menu-tagline-dot"></span>
+          <span>Cível</span>
+        </div>
+        -->
       </div>
 
       <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
@@ -87,12 +121,8 @@
   <!-- ── HERO ── -->
   <header id="hero" role="banner">
     <div class="hero-bg" aria-hidden="true">
-      <img
-        src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=85"
-        alt=""
-        loading="eager"
-        fetchpriority="high"
-      />
+      <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=85" alt="" loading="eager"
+        fetchpriority="high" />
     </div>
 
     <!-- Decorative circles -->
@@ -115,17 +145,13 @@
       </h1>
 
       <p class="hero-sub" id="hero-sub">
-        Advocacia trabalhista, previdenciária e cível com atendimento humano, ético e focado em resultados. Estamos ao seu lado na zona sul de São Paulo.
+        Advocacia trabalhista, previdenciária e cível com atendimento humano, ético e focado em resultados. Estamos ao
+        seu lado na zona sul de São Paulo.
       </p>
 
       <div class="hero-actions" id="hero-actions">
-        <a
-          href="https://wa.me/5511932053967?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Rodrigues%20Theodoro%20Advogados."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-primary"
-          id="hero-cta"
-        >
+        <a href="https://wa.me/5511932053967?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Rodrigues%20Theodoro%20Advogados."
+          target="_blank" rel="noopener noreferrer" class="btn-primary" id="hero-cta">
           <span class="material-symbols-outlined" style="font-size:1.125rem" aria-hidden="true">chat</span>
           Falar no WhatsApp
         </a>
@@ -186,11 +212,8 @@
         <!-- Visual -->
         <div class="sobre-visual anim-slide-left">
           <div class="sobre-img">
-            <img
-              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=85"
-              alt="Escritório Rodrigues Theodoro Advogados — atendimento ao cliente"
-              loading="lazy"
-            />
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=85"
+              alt="Escritório Rodrigues Theodoro Advogados — atendimento ao cliente" loading="lazy" />
           </div>
           <div class="sobre-badge" aria-hidden="true">
             <span class="sobre-badge-num">5.0</span>
@@ -206,10 +229,13 @@
             <span class="headline-italic">resultados reais.</span>
           </h2>
           <p class="sobre-text">
-            O Rodrigues Theodoro Advogados é um escritório localizado na Avenida Dona Belmira Marin, no Grajaú — no coração da zona sul de São Paulo. Reunimos profissionais registrados na OAB/SP com experiência sólida em Direito Trabalhista, Previdenciário e Cível.
+            O Rodrigues Theodoro Advogados é um escritório localizado na Avenida Dona Belmira Marin, no Grajaú — no
+            coração da zona sul de São Paulo. Reunimos profissionais registrados na OAB/SP com experiência sólida em
+            Direito Trabalhista, Previdenciário e Cível.
           </p>
           <p class="sobre-text">
-            Nossa missão é garantir acesso à justiça de forma acessível e eficaz, atendendo pessoas físicas e jurídicas com ética, transparência e dedicação em cada caso.
+            Nossa missão é garantir acesso à justiça de forma acessível e eficaz, atendendo pessoas físicas e jurídicas
+            com ética, transparência e dedicação em cada caso.
           </p>
 
           <ul class="sobre-list">
@@ -219,7 +245,8 @@
               </div>
               <div>
                 <p class="sobre-list-title">Atendimento Humanizado</p>
-                <p class="sobre-list-desc">Cada cliente é único. Ouvimos sua história com atenção e construímos a melhor estratégia jurídica para o seu caso.</p>
+                <p class="sobre-list-desc">Cada cliente é único. Ouvimos sua história com atenção e construímos a melhor
+                  estratégia jurídica para o seu caso.</p>
               </div>
             </li>
             <li class="sobre-list-item">
@@ -228,7 +255,8 @@
               </div>
               <div>
                 <p class="sobre-list-title">Ética e Compromisso OAB</p>
-                <p class="sobre-list-desc">Atuação pautada pelos mais altos padrões éticos da Ordem dos Advogados do Brasil, com rigor técnico e integridade.</p>
+                <p class="sobre-list-desc">Atuação pautada pelos mais altos padrões éticos da Ordem dos Advogados do
+                  Brasil, com rigor técnico e integridade.</p>
               </div>
             </li>
             <li class="sobre-list-item">
@@ -237,7 +265,8 @@
               </div>
               <div>
                 <p class="sobre-list-title">Raízes no Grajaú</p>
-                <p class="sobre-list-desc">Presença ativa na comunidade sul-paulistana. Localização estratégica: em frente à Pernambucanas, a 2 min do Terminal Grajaú.</p>
+                <p class="sobre-list-desc">Presença ativa na comunidade sul-paulistana. Localização estratégica: em
+                  frente à Pernambucanas, a 2 min do Terminal Grajaú.</p>
               </div>
             </li>
           </ul>
@@ -252,14 +281,17 @@
       <div class="max-w-7xl">
         <div class="areas-header">
           <span class="section-tag" style="justify-content:center">// Áreas de Atuação</span>
-          <h2 class="areas-title" id="areas-title">Soluções jurídicas<br><span class="headline-italic">para cada situação</span></h2>
-          <p class="areas-subtitle">Atendimento especializado em três frentes do direito, com foco na resolução ágil e eficaz dos seus problemas.</p>
+          <h2 class="areas-title" id="areas-title">Soluções jurídicas<br><span class="headline-italic">para cada
+              situação</span></h2>
+          <p class="areas-subtitle">Atendimento especializado em três frentes do direito, com foco na resolução ágil e
+            eficaz dos seus problemas.</p>
         </div>
 
         <div class="areas-grid max-w-7xl">
 
           <!-- Card 1: Trabalhista -->
-          <div class="area-card anim-up" data-modal="trabalhista" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver serviços de Direito Trabalhista">
+          <div class="area-card anim-up" data-modal="trabalhista" role="button" tabindex="0" aria-haspopup="dialog"
+            aria-label="Ver serviços de Direito Trabalhista">
             <div class="area-card-top">
               <div class="area-card-icon">
                 <span class="material-symbols-outlined" aria-hidden="true">work</span>
@@ -298,7 +330,8 @@
           </div>
 
           <!-- Card 2: Previdenciário -->
-          <div class="area-card anim-up" data-modal="previdenciario" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver serviços de Direito Previdenciário">
+          <div class="area-card anim-up" data-modal="previdenciario" role="button" tabindex="0" aria-haspopup="dialog"
+            aria-label="Ver serviços de Direito Previdenciário">
             <div class="area-card-top">
               <div class="area-card-icon">
                 <span class="material-symbols-outlined" aria-hidden="true">health_and_safety</span>
@@ -337,7 +370,8 @@
           </div>
 
           <!-- Card 3: Cível/Família -->
-          <div class="area-card anim-up" data-modal="civel" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver serviços de Direito Cível e Família">
+          <div class="area-card anim-up" data-modal="civel" role="button" tabindex="0" aria-haspopup="dialog"
+            aria-label="Ver serviços de Direito Cível e Família">
             <div class="area-card-top">
               <div class="area-card-icon">
                 <span class="material-symbols-outlined" aria-hidden="true">family_restroom</span>
@@ -393,19 +427,22 @@
           max-width: 80rem;
           margin-inline: auto;
         ">
-          <div style="position:absolute;top:-4rem;right:-4rem;width:16rem;height:16rem;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.06),transparent);pointer-events:none;"></div>
-          <div style="position:relative;z-index:1;">
-            <p style="font-family:var(--font-technical);font-size:0.5625rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--primary-gold);margin-bottom:0.5rem;opacity:0.8;">// Consulta Inicial</p>
-            <h3 style="font-family:var(--font-headline);font-size:1.75rem;font-weight:700;color:#ffffff;margin-bottom:0.5rem;line-height:1.2;">Não sabe qual área se aplica<br>ao seu caso?</h3>
-            <p style="font-size:0.9375rem;color:var(--on-surface-v);line-height:1.6;">Entre em contato. Nossa equipe avalia seu caso e orienta o melhor caminho.</p>
+          <div
+            style="position:absolute;top:-4rem;right:-4rem;width:16rem;height:16rem;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.06),transparent);pointer-events:none;">
           </div>
-          <a
-            href="https://wa.me/5511932053967?text=Ol%C3%A1!%20Preciso%20de%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20e%20gostaria%20de%20falar%20com%20o%20Rodrigues%20Theodoro%20Advogados."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-primary"
-            style="white-space:nowrap;flex-shrink:0;position:relative;z-index:1;"
-          >
+          <div style="position:relative;z-index:1;">
+            <p
+              style="font-family:var(--font-technical);font-size:0.5625rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--primary-gold);margin-bottom:0.5rem;opacity:0.8;">
+              // Consulta Inicial</p>
+            <h3
+              style="font-family:var(--font-headline);font-size:1.75rem;font-weight:700;color:#ffffff;margin-bottom:0.5rem;line-height:1.2;">
+              Não sabe qual área se aplica<br>ao seu caso?</h3>
+            <p style="font-size:0.9375rem;color:var(--on-surface-v);line-height:1.6;">Entre em contato. Nossa equipe
+              avalia seu caso e orienta o melhor caminho.</p>
+          </div>
+          <a href="https://wa.me/5511932053967?text=Ol%C3%A1!%20Preciso%20de%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20e%20gostaria%20de%20falar%20com%20o%20Rodrigues%20Theodoro%20Advogados."
+            target="_blank" rel="noopener noreferrer" class="btn-primary"
+            style="white-space:nowrap;flex-shrink:0;position:relative;z-index:1;">
             <span class="material-symbols-outlined" style="font-size:1rem" aria-hidden="true">chat</span>
             Falar com Advogado
           </a>
@@ -430,7 +467,8 @@
             <div class="dif-header">
               <div class="dif-header-left">
                 <span class="section-tag">// Nosso Diferencial</span>
-                <h2 class="dif-title" id="dif-title">Atendimento <span class="headline-italic">Personalizado.</span></h2>
+                <h2 class="dif-title" id="dif-title">Atendimento <span class="headline-italic">Personalizado.</span>
+                </h2>
               </div>
               <div class="dif-counter" aria-hidden="true">01 / 03</div>
             </div>
@@ -438,7 +476,8 @@
               <div class="dif-content">
                 <h3 class="dif-content-title">Cada caso é único.<br>Cada cliente, especial.</h3>
                 <p class="dif-content-text">
-                  Não somos um escritório de volume. Dedicamos atenção genuína a cada cliente, entendendo sua história em profundidade antes de agir. Você sempre sabe o que está acontecendo com seu processo.
+                  Não somos um escritório de volume. Dedicamos atenção genuína a cada cliente, entendendo sua história
+                  em profundidade antes de agir. Você sempre sabe o que está acontecendo com seu processo.
                 </p>
                 <div class="dif-list">
                   <div class="dif-divider"></div>
@@ -460,7 +499,8 @@
                 </div>
               </div>
               <div class="dif-visual">
-                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=900&q=85" alt="Atendimento personalizado ao cliente" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=900&q=85"
+                  alt="Atendimento personalizado ao cliente" loading="lazy">
               </div>
             </div>
           </div>
@@ -482,7 +522,8 @@
               <div class="dif-content">
                 <h3 class="dif-content-title">Onde você mora,<br>onde estamos.</h3>
                 <p class="dif-content-text">
-                  Localizado no Grajaú, zona sul de São Paulo, entendemos as necessidades da nossa comunidade. Fácil acesso: em frente à Pernambucanas, a apenas 2 minutos do Terminal Grajaú.
+                  Localizado no Grajaú, zona sul de São Paulo, entendemos as necessidades da nossa comunidade. Fácil
+                  acesso: em frente à Pernambucanas, a apenas 2 minutos do Terminal Grajaú.
                 </p>
                 <div class="dif-list">
                   <div class="dif-divider"></div>
@@ -504,7 +545,8 @@
                 </div>
               </div>
               <div class="dif-visual">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=85" alt="Comunidade e acesso à justiça" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=85"
+                  alt="Comunidade e acesso à justiça" loading="lazy">
               </div>
             </div>
           </div>
@@ -526,7 +568,8 @@
               <div class="dif-content">
                 <h3 class="dif-content-title">Ética como pilar,<br>vitória como meta.</h3>
                 <p class="dif-content-text">
-                  Atuamos com rigor técnico e compromisso ético inabalável. Nossa reputação é construída caso a caso, com a certeza de que o êxito do cliente é também o nosso.
+                  Atuamos com rigor técnico e compromisso ético inabalável. Nossa reputação é construída caso a caso,
+                  com a certeza de que o êxito do cliente é também o nosso.
                 </p>
                 <div class="dif-list">
                   <div class="dif-divider"></div>
@@ -548,7 +591,8 @@
                 </div>
               </div>
               <div class="dif-visual">
-                <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=900&q=85" alt="Resultados e conquistas jurídicas" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=900&q=85"
+                  alt="Resultados e conquistas jurídicas" loading="lazy">
               </div>
             </div>
           </div>
@@ -588,8 +632,10 @@
         <!-- Info -->
         <div>
           <span class="section-tag">// Fale Conosco</span>
-          <h2 class="contato-title" id="contato-title">Como podemos<br><span class="headline-italic">ajudar hoje?</span></h2>
-          <p class="contato-sub">Estamos prontos para ouvir seu caso, esclarecer dúvidas e iniciar a construção da melhor estratégia jurídica para você.</p>
+          <h2 class="contato-title" id="contato-title">Como podemos<br><span class="headline-italic">ajudar hoje?</span>
+          </h2>
+          <p class="contato-sub">Estamos prontos para ouvir seu caso, esclarecer dúvidas e iniciar a construção da
+            melhor estratégia jurídica para você.</p>
 
           <div class="contato-items">
             <a href="tel:+551159254951" class="contato-item" id="contato-tel">
@@ -602,14 +648,10 @@
               </div>
             </a>
 
-            <a
-              href="https://wa.me/5511932053967?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Rodrigues%20Theodoro%20Advogados."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contato-item"
-              id="contato-wa"
-            >
-              <div class="contato-item-icon" style="background:rgba(37,211,102,0.08);border-color:rgba(37,211,102,0.25);color:#25D366;">
+            <a href="https://wa.me/5511932053967?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Rodrigues%20Theodoro%20Advogados."
+              target="_blank" rel="noopener noreferrer" class="contato-item" id="contato-wa">
+              <div class="contato-item-icon"
+                style="background:rgba(37,211,102,0.08);border-color:rgba(37,211,102,0.25);color:#25D366;">
                 <span class="material-symbols-outlined" aria-hidden="true">chat</span>
               </div>
               <div>
@@ -636,7 +678,8 @@
                 <p class="contato-item-label">Endereço</p>
                 <p class="contato-item-val">Av. Dona Belmira Marin, 485 – Sala 2</p>
                 <p class="contato-item-note">Grajaú, São Paulo – SP | CEP 04846-010</p>
-                <p class="contato-item-note" style="color:var(--primary-gold);margin-top:0.3rem;font-size:0.8125rem;">Em frente à Pernambucanas · 2 min do Terminal Grajaú</p>
+                <p class="contato-item-note" style="color:var(--primary-gold);margin-top:0.3rem;font-size:0.8125rem;">Em
+                  frente à Pernambucanas · 2 min do Terminal Grajaú</p>
               </div>
             </div>
 
@@ -655,23 +698,29 @@
 
         <!-- Formulário -->
         <div class="contato-form-wrap">
-          <h3 style="font-family:var(--font-headline);font-size:1.5rem;font-weight:700;color:#ffffff;margin-bottom:0.375rem;line-height:1.2;">Envie sua mensagem</h3>
-          <p style="font-size:0.875rem;color:var(--on-surface-v);margin-bottom:1.75rem;line-height:1.5;">Respondemos em até 24 horas úteis.</p>
+          <h3
+            style="font-family:var(--font-headline);font-size:1.5rem;font-weight:700;color:#ffffff;margin-bottom:0.375rem;line-height:1.2;">
+            Envie sua mensagem</h3>
+          <p style="font-size:0.875rem;color:var(--on-surface-v);margin-bottom:1.75rem;line-height:1.5;">Respondemos em
+            até 24 horas úteis.</p>
 
           <form id="form-contato" novalidate>
             <div class="form-group">
               <label class="form-label" for="f-nome">Seu Nome Completo</label>
-              <input class="form-input" type="text" id="f-nome" name="nome" placeholder="Nome completo" required autocomplete="name" />
+              <input class="form-input" type="text" id="f-nome" name="nome" placeholder="Nome completo" required
+                autocomplete="name" />
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="f-tel">WhatsApp / Telefone</label>
-                <input class="form-input" type="tel" id="f-tel" name="telefone" placeholder="(11) 99999-9999" autocomplete="tel" />
+                <input class="form-input" type="tel" id="f-tel" name="telefone" placeholder="(11) 99999-9999"
+                  autocomplete="tel" />
               </div>
               <div class="form-group">
                 <label class="form-label" for="f-email">Seu E-mail</label>
-                <input class="form-input" type="email" id="f-email" name="email" placeholder="email@exemplo.com" autocomplete="email" />
+                <input class="form-input" type="email" id="f-email" name="email" placeholder="email@exemplo.com"
+                  autocomplete="email" />
               </div>
             </div>
 
@@ -688,7 +737,8 @@
 
             <div class="form-group">
               <label class="form-label" for="f-msg">Descreva seu caso</label>
-              <textarea class="form-input form-textarea" id="f-msg" name="mensagem" rows="4" placeholder="Conte brevemente sua situação para que possamos orientá-lo melhor..."></textarea>
+              <textarea class="form-input form-textarea" id="f-msg" name="mensagem" rows="4"
+                placeholder="Conte brevemente sua situação para que possamos orientá-lo melhor..."></textarea>
             </div>
 
             <button type="submit" class="form-submit" id="form-submit">
@@ -707,17 +757,14 @@
       <div class="footer-brand-col">
         <span class="footer-brand">Rodrigues Theodoro</span>
         <span class="footer-brand-sub">Advogados &nbsp;&nbsp;|&nbsp;&nbsp; OAB/SP</span>
-        <p class="footer-desc">Advocacia trabalhista, previdenciária e cível com atendimento humanizado no Grajaú, zona sul de São Paulo. Acesso à justiça para todos.</p>
+        <p class="footer-desc">Advocacia trabalhista, previdenciária e cível com atendimento humanizado no Grajaú, zona
+          sul de São Paulo. Acesso à justiça para todos.</p>
         <div class="footer-socials">
-          <a
-            href="https://wa.me/5511932053967"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="footer-social-btn"
-            aria-label="WhatsApp"
-          >
+          <a href="https://wa.me/5511932053967" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+            aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
             </svg>
           </a>
           <a href="mailto:rodriguestheodoroadvl@outlook.com" class="footer-social-btn" aria-label="E-mail">
@@ -767,24 +814,23 @@
   </footer>
 
   <!-- ── WHATSAPP FLOAT ── -->
-  <a
-    href="https://wa.me/5511932053967?text=Ol%C3%A1!%20Visitei%20o%20site%20e%20gostaria%20de%20falar%20com%20o%20Rodrigues%20Theodoro%20Advogados."
-    class="wa-float"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Fale conosco pelo WhatsApp"
-    id="wa-btn"
-  >
+  <a href="https://wa.me/5511932053967?text=Ol%C3%A1!%20Visitei%20o%20site%20e%20gostaria%20de%20falar%20com%20o%20Rodrigues%20Theodoro%20Advogados."
+    class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp" id="wa-btn">
     <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
     </svg>
   </a>
 
   <!-- ── MODAL OVERLAY ── -->
-  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title-el" aria-hidden="true">
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title-el"
+    aria-hidden="true">
     <div class="modal-box" id="modal-box">
       <button class="modal-close" id="modal-close" aria-label="Fechar">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
       </button>
       <div class="modal-header">
         <div class="modal-icon" id="modal-icon"></div>
@@ -809,4 +855,5 @@
   <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>
+
 </html>

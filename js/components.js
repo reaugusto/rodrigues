@@ -155,19 +155,18 @@ export function initNavbar() {
   if (!navbar) return;
 
   // Scroll behavior
-  let lastScroll = 0;
   window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 80) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-    lastScroll = currentScroll;
+    navbar.classList.toggle('scrolled', window.scrollY > 80);
   }, { passive: true });
 
   // Mobile menu toggle
   if (toggle && links) {
+    // Injeta stagger CSS nos links de navegação (exclui btn-nav e tagline)
+    const navLinks = links.querySelectorAll('a:not(.btn-nav)');
+    navLinks.forEach((link, i) => {
+      link.style.setProperty('--stagger', `${0.08 + i * 0.08}s`);
+    });
+
     toggle.addEventListener('click', () => {
       const isOpen = links.classList.toggle('open');
       toggle.classList.toggle('open', isOpen);
@@ -175,16 +174,28 @@ export function initNavbar() {
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Fechar ao clicar em link
-    links.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        links.classList.remove('open');
-        toggle.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
+    // Fechar ao clicar em link (exclui mobile-menu-footer contatos externos)
+    links.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Fechar com Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && links.classList.contains('open')) {
+        closeMobileMenu();
+      }
     });
   }
+
+  function closeMobileMenu() {
+    links.classList.remove('open');
+    toggle?.classList.remove('open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  // Expõe para uso no smooth scroll
+  window.__closeMobileMenu = closeMobileMenu;
 
   // Smooth scroll para links internos — usa Lenis quando disponível
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -198,12 +209,7 @@ export function initNavbar() {
       e.preventDefault();
 
       // Fecha menu mobile se aberto
-      if (links.classList.contains('open')) {
-        links.classList.remove('open');
-        toggle?.classList.remove('open');
-        toggle?.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      }
+      if (window.__closeMobileMenu) window.__closeMobileMenu();
 
       const navH = navbar?.offsetHeight ?? 80;
 
